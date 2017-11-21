@@ -63,7 +63,7 @@ class ViewController: UIViewController, UITableViewDelegate {
       unowned let weakSelf = self
       
       mainStopwatch.timer = Timer.scheduledTimer(timeInterval: 0.035, target: weakSelf, selector: Selector.updateMainTimer, userInfo: nil, repeats: true)
-      lapStopwatch.timer = Timer.scheduledTimer(timeInterval: 0.035, target: weakSelf, selector: Selector.ipdateLapTimer, userInfo: nil, repeats: true)
+      lapStopwatch.timer = Timer.scheduledTimer(timeInterval: 0.035, target: weakSelf, selector: Selector.updateLapTimer, userInfo: nil, repeats: true)
       
       RunLoop.current.add(mainStopwatch.timer, forMode: .commonModes)
       RunLoop.current.add(lapStopwatch.timer, forMode: .commonModes)
@@ -150,7 +150,7 @@ extension ViewController: UITableViewDataSource {
     return laps.count
   }
   
-  func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let identifier: String = "lapCell"
     let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath)
     
