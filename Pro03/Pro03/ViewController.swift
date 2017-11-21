@@ -12,7 +12,7 @@ class ViewController: UIViewController, UITableViewDelegate {
   // MARK: Variables
   fileprivate let mainStopwatch: Stopwatch = Stopwatch()
   fileprivate let lapStopwatch: Stopwatch = Stopwatch()
-  fileprivate var isPaly: Bool = false
+  fileprivate var isPlay: Bool = false
   fileprivate var laps: [String] = []
   
   // MARK: - UI components
@@ -59,7 +59,7 @@ class ViewController: UIViewController, UITableViewDelegate {
     
     changeButton(lapRestButton, title: "Lap", titleColor: UIColor.black)
     
-    if !isPaly {
+    if !isPlay {
       unowned let weakSelf = self
       
       mainStopwatch.timer = Timer.scheduledTimer(timeInterval: 0.035, target: weakSelf, selector: Selector.updateMainTimer, userInfo: nil, repeats: true)
@@ -68,25 +68,26 @@ class ViewController: UIViewController, UITableViewDelegate {
       RunLoop.current.add(mainStopwatch.timer, forMode: .commonModes)
       RunLoop.current.add(lapStopwatch.timer, forMode: .commonModes)
       
-      isPaly = true
+      isPlay = true
       changeButton(playPauseButton, title: "Stop", titleColor: UIColor.red)
     } else {
       mainStopwatch.timer.invalidate()
       lapStopwatch.timer.invalidate()
-      isPaly = false
+      isPlay = false
       changeButton(playPauseButton, title: "Start", titleColor: UIColor.green)
       changeButton(lapRestButton, title: "Reset", titleColor: UIColor.black)
     }
   }
   
   @IBAction func lapRestTimer(_ sender: AnyObject) {
-    if !isPaly {
+    if !isPlay {
       resetMainTimer()
       resetLapTimer()
       changeButton(lapRestButton, title: "Lap", titleColor: UIColor.lightGray)
       lapRestButton.isEnabled = false
     } else {
       if let timerLabelText = timerLabel.text {
+        print("lapRestTimer:\(timerLabelText)")
         laps.append(timerLabelText)
       }
       lapsTableView.reloadData()
@@ -135,7 +136,7 @@ class ViewController: UIViewController, UITableViewDelegate {
       minutes = "0\((Int)(stopwatch.counter / 60))"
     }
     
-    var seconds: String = String(format: "%.2",(stopwatch.counter.truncatingRemainder(dividingBy: 60)))
+    var seconds: String = String(format: "%.2f",(stopwatch.counter.truncatingRemainder(dividingBy: 60)))
     if stopwatch.counter.truncatingRemainder(dividingBy: 60) < 10 {
       seconds = "0" + seconds
     }
