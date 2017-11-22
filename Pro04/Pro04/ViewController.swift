@@ -52,12 +52,13 @@ class ViewController: UIViewController {
   }
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    print("id:\(String(describing: segue.identifier))")
     if segue.identifier == "editTodo" {
       let vc = segue.destination as! DetailViewController
       let indexPath = todoTableView.indexPathForSelectedRow
-      // 这个地方应该是判断吧，待测试
+    
       if let indexPath = indexPath {
-        vc.todo = todo[(indexPath as NSIndexPath).row]
+        vc.todo = todos[(indexPath as NSIndexPath).row]
       }
     }
   }
