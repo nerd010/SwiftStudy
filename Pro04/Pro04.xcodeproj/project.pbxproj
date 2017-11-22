@@ -16,6 +16,7 @@
 		182B287F1FC55DFB007BC674 /* Pro04UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182B287E1FC55DFB007BC674 /* Pro04UITests.swift */; };
 		182B288D1FC55E54007BC674 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182B288C1FC55E54007BC674 /* Utils.swift */; };
 		182B288F1FC55F80007BC674 /* ToDoItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182B288E1FC55F80007BC674 /* ToDoItem.swift */; };
+		182B28911FC56776007BC674 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182B28901FC56776007BC674 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		182B28801FC55DFB007BC674 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		182B288C1FC55E54007BC674 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		182B288E1FC55F80007BC674 /* ToDoItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoItem.swift; sourceTree = "<group>"; };
+		182B28901FC56776007BC674 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 				182B28601FC55DFB007BC674 /* ViewController.swift */,
 				182B288C1FC55E54007BC674 /* Utils.swift */,
 				182B288E1FC55F80007BC674 /* ToDoItem.swift */,
+				182B28901FC56776007BC674 /* DetailViewController.swift */,
 				182B28621FC55DFB007BC674 /* Main.storyboard */,
 				182B28651FC55DFB007BC674 /* Assets.xcassets */,
 				182B28671FC55DFB007BC674 /* LaunchScreen.storyboard */,
@@ -267,6 +270,7 @@
 			files = (
 				182B28611FC55DFB007BC674 /* ViewController.swift in Sources */,
 				182B285F1FC55DFB007BC674 /* AppDelegate.swift in Sources */,
+				182B28911FC56776007BC674 /* DetailViewController.swift in Sources */,
 				182B288F1FC55F80007BC674 /* ToDoItem.swift in Sources */,
 				182B288D1FC55E54007BC674 /* Utils.swift in Sources */,
 			);
