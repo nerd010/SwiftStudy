@@ -26,7 +26,7 @@ class ArtistListViewController: UIViewController {
   }
   
   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    if let destination = segue.destination as? ArtistListViewController,
+    if let destination = segue.destination as? ArtistDetailViewController,
       let indexPath = tableView.indexPathForSelectedRow {
       destination.selectedArtist = artists[indexPath.row]
     }
@@ -35,6 +35,7 @@ class ArtistListViewController: UIViewController {
 
 extension ArtistListViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    print("aaa:\(artists.count)")
     return artists.count
   }
   

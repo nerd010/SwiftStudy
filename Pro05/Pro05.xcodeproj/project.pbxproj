@@ -19,6 +19,7 @@
 		1847ED9C1FC7FB1D0039E5D7 /* ArtistDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1847ED9B1FC7FB1D0039E5D7 /* ArtistDetailViewController.swift */; };
 		1847ED9E1FC7FEE90039E5D7 /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1847ED9D1FC7FEE90039E5D7 /* Artist.swift */; };
 		1847EDA01FC8027B0039E5D7 /* Work.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1847ED9F1FC8027B0039E5D7 /* Work.swift */; };
+		1847EDA31FC823300039E5D7 /* artists.json in Resources */ = {isa = PBXBuildFile; fileRef = 1847EDA21FC823300039E5D7 /* artists.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		1847ED9B1FC7FB1D0039E5D7 /* ArtistDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistDetailViewController.swift; sourceTree = "<group>"; };
 		1847ED9D1FC7FEE90039E5D7 /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		1847ED9F1FC8027B0039E5D7 /* Work.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Work.swift; sourceTree = "<group>"; };
+		1847EDA21FC823300039E5D7 /* artists.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = artists.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				182B289F1FC6AA76007BC674 /* AppDelegate.swift */,
+				1847EDA11FC823130039E5D7 /* Resources */,
 				1847ED911FC7F6230039E5D7 /* Views */,
 				1847ED941FC7F63E0039E5D7 /* Models */,
 				1847ED921FC7F62C0039E5D7 /* ViewControllers */,
@@ -162,6 +165,14 @@
 				1847ED9F1FC8027B0039E5D7 /* Work.swift */,
 			);
 			name = Models;
+			sourceTree = "<group>";
+		};
+		1847EDA11FC823130039E5D7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1847EDA21FC823300039E5D7 /* artists.json */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,6 +284,7 @@
 			files = (
 				182B28AA1FC6AA76007BC674 /* LaunchScreen.storyboard in Resources */,
 				182B28A71FC6AA76007BC674 /* Assets.xcassets in Resources */,
+				1847EDA31FC823300039E5D7 /* artists.json in Resources */,
 				182B28A51FC6AA76007BC674 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
